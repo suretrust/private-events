@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # come back
+      flash[:success] = 'You have successfully signed up!'
+      redirect_to # events page
     else
       render new_user_path
     end
