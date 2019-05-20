@@ -12,8 +12,11 @@
   <body>
     <% if logged_in? %>
       <%= link_to 'Sign Out', session_path, method: :delete  %>
+      <div>
+        <p>Welcome, <%= current_user.name.capitalize %>!</p>
+      </div>
     <% end %>
-    
+
     <% flash.each do |key,value| %>
       <p><%= value %></p>
     <% end %>
