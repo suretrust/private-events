@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       login(@user)
       flash[:success] = 'You have successfully signed up!'
-      # redirect_to # events page
+      redirect_to events_path
     else
       render new_user_path
     end
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @events = current_user.events
+    @attended_events = current_user.attended_events
   end
 
   private

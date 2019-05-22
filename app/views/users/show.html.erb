@@ -5,11 +5,21 @@
   <%= link_to 'Create new event', new_event_path %>
 </h3>
 
+<h2>Upcoming Events</h2>
 <ul>
-<% @events.each do |event| %>
-  <li>
-    <%= link_to event.name, event %>
-  </li>
-<% end %>
+  <% @events.each do |event| %>
+    <li>
+      <%= link_to event.name, event %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Attended Events</h2>
+<ul>
+  <% @attended_events.each do |event| %>
+    <li>
+      <%= link_to event.name, event %>
+    </li>
+  <% end %>
 </ul>
 

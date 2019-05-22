@@ -17,3 +17,13 @@
     The event will start in <%= distance_of_time_in_words(@event.date, DateTime.now) %>
   </p>
 </div>
+
+<h2>List of Attendees</h2>
+
+<ul>
+  <% @attendees.each do |attendee| %>
+    <li><%= attendee.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to all events', events_path %>

@@ -1,14 +1,18 @@
+# frozen_string_literal: true
+
 class EventsController < ApplicationController
   def index
     @events = Event.all
   end
-  
+
   def show
-    @event = current_user.events.find params[:id]
+    @event = Event.find params[:id]
+    @attendees = @event.attendees
   end
 
   def create
     @event = current_user.events.create event_params
+    redirect_to @event
   end
 
   def new

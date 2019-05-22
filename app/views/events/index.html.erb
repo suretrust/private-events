@@ -1,10 +1,12 @@
-<h1>index</h1>
+<h1>All Events</h1>
 
 
 <ul>
-<% @events.each do |event| %>
-  <li>
-    <%= link_to event.name, event %>
-  </li>
-<% end %>
+  <% @events.each do |event| %>
+    <li>
+      <%= link_to event.name, event %>
+    </li>
+  <% end %>
 </ul>
+
+<%= link_to 'Create new events', new_event_path %>
