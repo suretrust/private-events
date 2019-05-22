@@ -1,2 +1,15 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Created Events</h1>
+
+<h3>
+  You have created <%= @events.count %> <%= ' Event'.pluralize(@events.count) %>
+  <%= link_to 'Create new event', new_event_path %>
+</h3>
+
+<ul>
+<% @events.each do |event| %>
+  <li>
+    <%= link_to event.name, event %>
+  </li>
+<% end %>
+</ul>
+
