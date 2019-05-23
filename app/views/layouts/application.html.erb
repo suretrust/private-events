@@ -10,11 +10,19 @@
   </head>
 
   <body>
+    
     <% if logged_in? %>
-      <%= link_to 'Sign Out', session_path, method: :delete  %>
-      <div>
-        <p>Welcome, <%= current_user.name.capitalize %>!</p>
-      </div>
+      <header>
+        <div>
+          <%= link_to 'Events', events_path %>
+          <%= link_to 'Create Event', new_event_path %> 
+        </div>
+        
+        <div>
+          <%= link_to current_user.name, current_user %>
+          <%= link_to 'Sign Out', session_path, method: :delete  %>
+        </div>
+      </header>
     <% end %>
 
     <% flash.each do |key,value| %>

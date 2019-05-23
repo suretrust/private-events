@@ -1,22 +1,11 @@
-<h1>All Events</h1>
+<h1>Amazing events you can attend</h1>
 
-<h2>Previuos events</h2>
-<ul>
-  <% @previous_events.each do |event| %>
-    <li>
-      <%= link_to event.name, event %>
-    </li>
-  <% end %>
-</ul>
-
-<h2>Upcoming events</h2>
-<ul>
-  <% @upcoming_events.each do |event| %>
-    <li>
-      <%= link_to event.name, event %>
-    </li>
-  <% end %>
-</ul>
-
-
-<%= link_to 'Create new events', new_event_path %>
+<% @upcoming_events.each do |event| %>
+  <div class='event-box'>
+    <%= link_to event.name, event %>
+    <p>Venue: <%= event.address %></p>
+    <p>Date: <%= event.date.strftime("%B %d, %Y") %></p>
+    <p>Created by: <%= event.owner.name %></p>
+    <%= button_to 'Enrol',  %>
+  </div>
+<% end %>
