@@ -1,20 +1,24 @@
-<h1>Welcome to Eventer</h1>
+<div class="background">
+  <h1 class ='welcome'>Welcome to Eventer</h1>
+</div>
 
-<h2>Login In</h2>
 
-<%= form_for :session, url: session_path do |f| %>
-  <div>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
+<div class='login-form'>
+  <h2 class='login'>Login In</h2>
+  <%= form_for :session, url: session_path do |f| %>
+    <div>
+      <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
+    </div>
 
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
+    <div>
+      <%= f.password_field :password, placeholder: 'Password', class: 'field' %>
+    </div>
 
-  <%= f.submit 'Login' %>
-<% end %>
+    <div>
+      <%= f.submit 'Login', class: 'submit' %>
+    </div>
+  <% end %>
+  <p class='not-user'>Not a user? <%= link_to 'Sign Up', new_user_path %></p>
+</div>
 
-<p>Not a user? <%= link_to 'Sign Up', new_user_path %></p>
   
