@@ -1,4 +1,6 @@
-<h1>Login In</h1>
+<h1>Welcome to Eventer</h1>
+
+<h2>Login In</h2>
 
 <%= form_for :session, url: session_path do |f| %>
   <div>
@@ -13,4 +15,6 @@
 
   <%= f.submit 'Login' %>
 <% end %>
+
+<p>Not a user? <%= link_to 'Sign Up', new_user_path %></p>
   
