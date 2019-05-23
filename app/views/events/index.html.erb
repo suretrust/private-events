@@ -6,6 +6,6 @@
     <p>Venue: <%= event.address %></p>
     <p>Date: <%= event.date.strftime("%B %d, %Y") %></p>
     <p>Created by: <%= event.owner.name %></p>
-    <%= button_to 'Enrol',  %>
+    <%= link_to 'Enroll', event, method: :patch %>
   </div>
 <% end %>

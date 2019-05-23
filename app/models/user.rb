@@ -3,13 +3,12 @@
 class User < ApplicationRecord
   # Associations
   has_many :events
-  has_and_belongs_to_many :attended_events, class_name: 'Event'
+  has_and_belongs_to_many :enrolled_events, class_name: 'Event'
   
   # Validations
-  validates :name, presence: true
-  validates :email, presence: true
+  validates :name, :email, presence: true
   validates :password, length: { minimum: 6 }
-
+  validates :enrolled_events, uniqueness: true
 
   has_secure_password
 end

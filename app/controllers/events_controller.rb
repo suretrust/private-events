@@ -12,14 +12,21 @@ class EventsController < ApplicationController
     @event = Event.find params[:id]
     @attendees = @event.attendees
   end
-
+  
+  def new
+    @event = current_user.events.new
+  end
+  
   def create
     @event = current_user.events.create event_params
     redirect_to @event
   end
 
-  def new
-    @event = current_user.events.new
+  def update
+    @event = Event.find params[:id]
+    @event.attendees << current_user
+    flash.now[:success] = 'You have been enrolled'
+    redirect_to current_user 
   end
 
   private

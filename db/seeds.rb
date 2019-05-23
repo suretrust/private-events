@@ -34,11 +34,16 @@ User.find_by(name: 'Bugs Bunny').events.create!([
 
 # Event Creation
 User.find_by(name: 'Micky Mouse').events.create!([
-  {date: Date.new(2001,2,3)  ,address:'Address 3 ', name: "Yes, I am stubborn"},
-  {date: Date.new(2022,2,3)  ,address:'Address 4 ', name: "Gee, ain't I a stinker? "}
+  {date: Date.new(2001,2,3)  ,address:'Address 3  ', name: "Yes, I am stubborn"},
+  {date: Date.new(2022,2,3)  ,address:'Address 4  ', name: "Gee, ain't I a stinker?"},
+  {date: Date.new(2022,7,3)  ,address:'Address 7  ', name: "Donald Duck is not enrolled in this"},
+  {date: Date.new(2022,7,3)  ,address:'Address 8  ', name: "Donald Duck is not enrolled in this 2"},
+  {date: Date.new(2022,7,3)  ,address:'Address 9  ', name: "Donald Duck is not enrolled in this 3"},
+  {date: Date.new(2022,7,3)  ,address:'Address 10 ', name: "Donald Duck is not enrolled in this 4"},
+  {date: Date.new(2022,7,3)  ,address:'Address 11 ', name: "Donald Duck is not enrolled in this 5"},
+  {date: Date.new(2022,7,3)  ,address:'Address 12 ', name: "Donald Duck is not enrolled in this 6"},
+
 ])
-
-
 
 puts 'created events successfully'
 
@@ -48,6 +53,7 @@ Event.first.attendees << User.find_by(name: 'Donald Duck')
 Event.first.attendees << User.find_by(name: 'Micky Mouse')
 
 puts 'created attendees'
+
 Event.last.attendees << User.find_by(name: 'Bugs Bunny')
 Event.last.attendees << User.find_by(name: 'Donald Duck')
 Event.last.attendees << User.find_by(name: 'Micky Mouse')
