@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    
+
     <% if logged_in? %>
       <header>
         <div>
@@ -29,6 +29,13 @@
       <p><%= value %></p>
     <% end %>
 
-    <%= yield %>
+    <main class="<%= controller.controller_name %>">
+      <%= yield %>
+    </main>
+
+    <footer>
+      This is the footer
+    </footer>
+  
   </body>
 </html>

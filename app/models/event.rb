@@ -8,4 +8,7 @@ class Event < ApplicationRecord
   # scopes
   scope :upcoming_events, -> { where("date > ?", Time.now) }
   scope :previous_events, -> { where("date < ?", Time.now) }
+
+  # default scope
+  default_scope { order(:date) }
 end

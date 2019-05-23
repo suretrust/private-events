@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class EventsController < ApplicationController
+  include EventsHelper
   before_action :require_login, only: :index
 
   def index
@@ -25,8 +26,8 @@ class EventsController < ApplicationController
   def update
     @event = Event.find params[:id]
     @event.attendees << current_user
-    flash.now[:success] = 'You have been enrolled'
-    redirect_to current_user 
+    flash[:success] = 'Thanks for Enrolling!'
+    redirect_to current_user
   end
 
   private

@@ -2,10 +2,18 @@
 
 <% @upcoming_events.each do |event| %>
   <div class='event-box'>
-    <%= link_to event.name, event %>
-    <p>Venue: <%= event.address %></p>
-    <p>Date: <%= event.date.strftime("%B %d, %Y") %></p>
-    <p>Created by: <%= event.owner.name %></p>
-    <%= link_to 'Enroll', event, method: :patch %>
+    
+    <div class="event-header">
+      <h2 class="event-name"><%= link_to event.name, event %></h2>
+      <p class="event-description"></p>
+    </div>
+
+    <div class="event-info">
+      <p>Venue: <%= event.address %></p>
+      <p>Date: <%= event.date.strftime("%B %d, %Y") %></p>
+      <p>Created by: <%= event.owner.name %></p>
+      <%= button_to 'Enroll', event, method: :patch, disabled: enrolled?(event) %>
+    </div>
+
   </div>
 <% end %>

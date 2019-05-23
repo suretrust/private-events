@@ -13,11 +13,12 @@ class UsersController < ApplicationController
       redirect_to events_path
     else
       render new_user_path
-  end
+    end
   end
 
   def show
-    @enrolled_events = current_user.enrolled_events
+    @enrolled_upcoming_events = current_user.enrolled_events.upcoming_events
+    @enrolled_previous_events = current_user.enrolled_events.previous_events
     @previous_events = current_user.events.previous_events
     @upcoming_events = current_user.events.upcoming_events
   end

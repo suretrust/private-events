@@ -1,13 +1,15 @@
 
-<h2>Enrolled Events</h2>
-<ul>
-  <% @enrolled_events.each do |event| %>
-    <li>
+<h2>Enrolled  Upcoming Events</h2>
+<div class="enrolled_upcoming_events">
+  <% @enrolled_upcoming_events.each do |event| %>
+    <div class="event-shortcut">
       <%= link_to event.name, event %>
-    </li>
+      <p><%= event.date.strftime("%B %d, %Y") %></p>
+    </div>
   <% end %>
-</ul>
+</div>
 
+<%#                                                            %>
 
 <h1>Created Events</h1>
 

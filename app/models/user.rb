@@ -8,7 +8,6 @@ class User < ApplicationRecord
   # Validations
   validates :name, :email, presence: true
   validates :password, length: { minimum: 6 }
-  validates :enrolled_events, uniqueness: true
 
   has_secure_password
 end
