@@ -17,27 +17,29 @@
   }
 
   .event-box {
-    border-top: .3em solid orange;
     width: 70%;
     margin: 0 auto;
     padding: 1em;
 
     .event-header {
-      background-image: url(bg1);
-      background-size: cover;
-      background-position: 10% 60%;
+      border-top: .3em solid orange;
+      background-color: #eee;
 
       .event-name a {
-        text-decoration: none;
+        text-decoration: underline;
         color: inherit;
       }
+      .event-name a:hover {
+        color: #1e453e;
+      }
+
       h2 {
         padding: .5em;
         font-size: 2em;
       }
       p {
         padding: 0 .5em .5em .5em;
-        font-size: 1.3em;
+        font-size: 1.2em;
         line-height: 1.5em;
       }
     }
@@ -46,9 +48,18 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      padding: 0.35em 0;
-      font-size: 1.1em;
+      padding: 0.5em 0;
+      font-size: 1em;
       background-color: rgba(265, 165, 0, .5);
+
+      a {
+        text-decoration: underline;
+        color: black;
+        
+        &:hover {
+          color: #1e453e;
+        }
+      }
     }
     
     .enroll-btn {
@@ -57,7 +68,7 @@
     
       input[type="submit"] {
         
-        margin-top: 1em;
+        margin-top: 1.5em;
         width: 100%;
         background-color: orange;
         padding: .4em .2em;
