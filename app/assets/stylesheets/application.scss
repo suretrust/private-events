@@ -9,7 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ *= require reset
  *= require_tree .
  *= require_self
  */
@@ -44,13 +44,6 @@ footer {
     background-color: black;
     text-align: center;
     color: white;
-    height: 2em;
-    line-height: 2em;
-    margin: -2em auto;
-
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    height: 10vh;
+    line-height: 10vh;
 }

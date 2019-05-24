@@ -1,53 +1,57 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Candal&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap');
 
-.background {
-    display: flex;
-    background-image: url(eventer);
-    background-position: 50% 70%;
+.sessions {
+  .background {
+    background:
+    linear-gradient(
+      rgba(0,0,0,0.1),
+      rgba(4,4,43,0.5), 
+      rgba(0,0,0,0.8)),
+        url(eventer);
+    
     background-size: cover;
-    height: 21em;
-    .welcome {
-        display: flex;
-        font-family: 'Candal', sans-serif;
-        justify-content: center;
-        flex-direction: column;
-        text-shadow: 2px 2px 4px rgba(133, 0, 140, 0.65);
-        font-weight: 100;
-        font-size: 5em;
-        margin: 0 auto;
-        color: white;
-    }
-}
-.login-form {
+    background-position: center 65%;
+    text-align: center;
+    height: 40vh;
+    line-height: 40vh;
+    font-weight: bold;
+    font-size: 8vw;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    -webkit-text-stroke: 1px darkgrey;
+  }
+
+  .login-form {
+    height: 50vh;
     margin: 0 auto;
     text-align: center;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+
     .field {
-        width: 60%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+      width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
-        
+
     .submit {
-        width: 60%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        &:hover {
-            background-color: #45a049;
-        }
-    }        
+      width: 60%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
 }
