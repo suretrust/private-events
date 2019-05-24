@@ -2,11 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
 .signup-form {
     margin: 0 auto;
     text-align: center;
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 20vh;
+    height: 100vh;
+    .sign-up {
+        font-size: 2em;
+        padding-bottom: .4em;
+    }
     .field {
         width: 60%;
         padding: 12px 20px;
@@ -19,7 +26,7 @@
         
     .submit {
         width: 60%;
-        background-color: #4CAF50;
+        background-color: rgb(190, 124, 0);
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -27,7 +34,88 @@
         border-radius: 4px;
         cursor: pointer;
         &:hover {
-            background-color: #45a049;
+            background-color:rgb(214, 139, 0);
         }
     }        
+}
+
+
+.show-users {
+    font-family: 'Work Sans', sans-serif;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+    
+    .enrolled-upcoming-events {
+        width: 50%;
+
+        h2 {
+            padding: 1em 0;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 2.4em;
+        }
+
+        .event-box {
+            margin: .5em 1em;
+
+            .event-name {
+
+                border-top: .3em solid orange;
+                background-color: #eee;
+                font-size: 2em;
+                padding: .3em 0.3em;
+                a {
+                    text-decoration: underline;
+                    color: inherit;
+                }
+    
+                a:hover {
+                    color: #1e453e;
+                }
+            }
+
+            .event-info {
+                background-color: rgba(255, 165, 0, 0.5);
+                padding: .8em .3em;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .events-details {
+        width: 50%;
+
+        .event-header h2 {
+            padding: 1em 0;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 2.4em;
+        }
+
+        .event-box {
+            margin: 0 auto;
+            margin: .5em;
+            
+
+            .event-name {
+                border-top: .3em solid orange;
+                background-color: #eee;
+                font-size: 2em;
+                padding: .3em 0.3em;
+
+                a {
+                    text-decoration: underline;
+                    color: inherit;
+                }
+    
+                a:hover {
+                    color: #1e453e;
+                }
+            }
+        }
+
+    }
 }
