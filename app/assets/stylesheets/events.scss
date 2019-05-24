@@ -2,11 +2,73 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 
-h1 {
+
+.events {  
+  font-family: 'Work Sans', sans-serif;
+  width: 70%;
+  margin: 0 auto;
+  h1 {
+    padding: 1em 0;
     text-align: center;
-    background-color: #f2f2f2;
     margin: 0 auto;
-    height: 2em;
-    line-height: 2em;
+    font-size: 2.4em;
+  }
+
+  .event-box {
+    border-top: .3em solid orange;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1em;
+
+    .event-header {
+      background-image: url(bg1);
+      background-size: cover;
+      background-position: 10% 60%;
+
+      .event-name a {
+        text-decoration: none;
+        color: inherit;
+      }
+      h2 {
+        padding: .5em;
+        font-size: 2em;
+      }
+      p {
+        padding: 0 .5em .5em .5em;
+        font-size: 1.3em;
+        line-height: 1.5em;
+      }
+    }
+
+    .event-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0.35em 0;
+      font-size: 1.1em;
+      background-color: rgba(265, 165, 0, .5);
+    }
+    
+    .enroll-btn {
+      width: 30%;
+      margin: 0 auto;
+    
+      input[type="submit"] {
+        
+        margin-top: 1em;
+        width: 100%;
+        background-color: orange;
+        padding: .4em .2em;
+        border: none;
+        border-radius: .3em;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      input[type="submit"]:disabled {
+        background: #dddddd;
+      }
+    }
+  }
 }

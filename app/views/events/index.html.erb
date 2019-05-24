@@ -5,13 +5,29 @@
     
     <div class="event-header">
       <h2 class="event-name"><%= link_to event.name, event %></h2>
-      <p class="event-description"></p>
+      <p class="event-description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+    
+    <div class="event-info">
+      <p>
+      <img src="assets/address.png" alt="address-icon">
+        <%= event.address %>
+      </p>
+      
+      <p>
+        <img src="assets/date.png" alt="date-icon">
+        <%= event.date.strftime("%B %d, %Y") %>
+      </p>
+      
+      <p>
+        <img src="assets/person.png" alt="person-icon">
+        <%= event.owner.name %>
+      </p>
     </div>
 
-    <div class="event-info">
-      <p>Venue: <%= event.address %></p>
-      <p>Date: <%= event.date.strftime("%B %d, %Y") %></p>
-      <p>Created by: <%= event.owner.name %></p>
+    <div class="enroll-btn">
       <%= button_to 'Enroll', event, method: :patch, disabled: enrolled?(event) %>
     </div>
 
