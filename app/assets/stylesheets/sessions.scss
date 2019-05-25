@@ -1,62 +1,120 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap');
-
 .sessions {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: #fff;
+
   .background {
     background:
-    linear-gradient(
-      rgba(0,0,0,0.1),
-      rgba(4,4,43,0.5), 
-      rgba(0,0,0,0.8)),
-        url(eventer);
-    
+      linear-gradient(rgba(0, 0, 0, 0.1),
+        rgba(4, 4, 43, 0.5),
+        rgba(0, 0, 0, 0.8)),
+      url(eventer);
     background-size: cover;
-    background-position: center 65%;
-    text-align: center;
-    height: 20rem;
-    line-height: 20rem;
-    font-weight: bold;
-    font-size: 8vw;
-    font-family: 'Merriweather', serif;
-    color: rgb(190, 124, 0);
-    -webkit-text-stroke: 1px white;
+    background-position: 50% 80%;
+    min-height: 40em;
+
+    .head {
+      padding: 1.5em 3em;
+      display: flex;
+      justify-content: space-between;
+
+      .logo {
+        font-size: 2.8rem;
+        font-weight: 300;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 2.5rem;
+        //color: #a74953;
+      }
+
+      .sign-up-btn {
+        padding: .7em 0;
+
+        a {
+          text-decoration: underline;
+          font-size: 1.3rem;
+          color: #fff;
+
+          &:hover {
+            color: #a74953;
+          }
+        }
+      }
+    }
   }
 
   .login-form {
-    height: 25em;
+    font-family: 'Raleway', sans-serif;
+    width: 70%;
     margin: 0 auto;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding-top: 1em;
+
+    @media (min-width: 700px) {
+      width: 40%
+    }
+
 
     .login {
-      font-size: 2em;
-      padding-bottom: .3em;
+      font-size: 2.3rem;
+      padding: 1.5rem 0;
+      font-weight: 500;
+      margin: .8em;
+      border-bottom: 2px solid;
+      border-image-source:
+        linear-gradient(90deg,
+          rgba(167, 73, 83, 0) 0%,
+          rgba(167, 73, 83, 0.25) 10%,
+          rgba(167, 73, 83, 0.5) 25%,
+          rgba(167, 73, 83, 0.75) 40%,
+          rgba(167, 73, 83, 1) 50%,
+          rgba(167, 73, 83, 0.75) 60%,
+          rgba(167, 73, 83, 0.50) 75%,
+          rgba(167, 73, 83, 0.25) 90%,
+          rgba(167, 73, 83, 0) 100%);
+      border-image-slice: 1;
+    }
+
+    .field,
+    .submit {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2em;
+      padding: 1em 1.5em;
+      margin: 1em;
+      color: #fff;
+      border: none;
+
     }
 
     .field {
-      width: 40%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
+      width: 80%;
+      background-color: rgba(1, 1, 1, .8);
+      border-bottom: .1em solid #a74953;
+
+      &::placeholder {
+        color: #eee;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    /* Change Autocomplete styles in Chrome*/
+    .field:-webkit-autofill,
+    .field:-webkit-autofill:hover,
+    .field:-webkit-autofill:focus {
+      border-bottom: .15em solid #a74953;
+      -webkit-text-fill-color: #a74953;
+      box-shadow: 0 0 0px 1000px #000 inset;
+      transition: background-color 5000s ease-in-out 0s;
     }
 
     .submit {
-      width: 40%;
-      background-color: rgb(190, 124, 0);
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      
-      &:hover {
-        background-color:rgb(214, 139, 0);
-      }
+      background-color: #a74953;
+      opacity: .8;
+      width: 90%;
+      color: #fff;
     }
   }
 }

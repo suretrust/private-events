@@ -1,24 +1,23 @@
 <div class="background">
-  Welcome to Eventer
+  <div class="head">
+    <p class="logo">Event<span>IO</span></p>
+    <p class="sign-up-btn"><%= link_to 'Sign Up', new_user_path %></p>
+  </div>
+
+  <div class='login-form'>
+    <h2 class='login'>Login In</h2>
+    <%= form_for :session, url: session_path, html: { autocomplete: 'off' } do |f| %>
+      <div>
+        <%= f.email_field :email, placeholder: 'Email', class: 'field', autocomplete: 'none' %>
+      </div>
+
+      <div>
+        <%= f.password_field :password, placeholder: 'Password', class: 'field', autocomplete: 'none' %>
+      </div>
+
+      <div>
+        <%= f.submit 'Login', class: 'submit' %>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-
-<div class='login-form'>
-  <h2 class='login'>Login In</h2>
-  <%= form_for :session, url: session_path do |f| %>
-    <div>
-      <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
-    </div>
-
-    <div>
-      <%= f.password_field :password, placeholder: 'Password', class: 'field' %>
-    </div>
-
-    <div>
-      <%= f.submit 'Login', class: 'submit' %>
-    </div>
-  <% end %>
-  <p class='not-user'>Not a user? <%= link_to 'Sign Up', new_user_path %></p>
-</div>
-
-  

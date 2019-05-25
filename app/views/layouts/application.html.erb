@@ -11,6 +11,12 @@
 
   <body>
 
+    <% flash.each do |key,value| %>
+      <div class="custom-alert">
+        <p><%= value %></p>
+      </div>
+    <% end %>
+
     <% if logged_in? %>
       <header>
         <div class='left'>
@@ -23,10 +29,6 @@
           <%= link_to 'Sign Out', session_path, method: :delete  %>
         </div>
       </header>
-    <% end %>
-
-    <% flash.each do |key,value| %>
-      <p><%= value %></p>
     <% end %>
 
     <main class="<%= controller.controller_name %>">

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to events_path
     else
       flash.now[:error] = "Invalid login credentials"
-      render 'new'
+      render :new
     end
   end
 

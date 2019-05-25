@@ -10,44 +10,85 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *= require reset
+ *= require fonts
  *= require_tree .
  *= require_self
  */
 
-header {
-  display: flex;
-  height: 3em;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #1e453e;
 
-  .left,
-  .right {
-    align-self: center;
 
-    a {
-      margin-right: 0.5em;
-      color: antiquewhite;
-      text-decoration: none;
-      padding: 0.5em 1em;
-      border: 1px solid antiquewhite;
+body {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+
+  .custom-alert {
+    text-align: center;
+    position: absolute;
+    width: 30em;
+    top: 1%;
+    left: calc(50% - 15em);
+    padding: 1em;
+    background-color: #a74953;
+    color: #fff;
+    line-height: 1.5em;
+    -webkit-animation: cssAnimation 5s forwards; 
+    animation: cssAnimation 5s forwards;
+  
+    @keyframes cssAnimation {
+      0%   {opacity: 1;}
+      90%  {opacity: 1;}
+      100% {opacity: 0;}
     }
 
-    a:hover {
-      color: #1e453e;
-      background-color: antiquewhite;
+    @-webkit-keyframes cssAnimation {
+      0%   {opacity: 1;}
+      90%  {opacity: 1;}
+      100% {opacity: 0;}
+    }
+
+    p {
+      font-size: 1.2em;
+      display: inline;
+      padding: 1em;
     }
   }
-}
 
-footer {
-  background-color: black;
-  text-align: center;
-  color: white;
-  line-height: 10vh;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
+  header {
+    display: flex;
+    height: 3em;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1e453e;
+
+    .left,
+    .right {
+      align-self: center;
+
+      a {
+        margin-right: 0.5em;
+        color: antiquewhite;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border: 1px solid antiquewhite;
+      }
+
+      a:hover {
+        color: #1e453e;
+        background-color: antiquewhite;
+      }
+    }
+  }
+
+  footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    line-height: 5em;
+    height: 6em;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+  }
 }
