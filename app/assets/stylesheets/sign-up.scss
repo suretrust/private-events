@@ -44,12 +44,13 @@
     .signup-form {
       margin: 0 auto;
       text-align: center;
-      height: calc(100vh - 9em);
+      height: calc(80vh - 9em);
 
       .sign-up-header {
         color: white;
         font-size: 2em;
         padding-bottom: .4em;
+        margin-top: 3em;
       }
 
       .field {
