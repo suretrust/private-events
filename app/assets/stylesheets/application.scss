@@ -15,24 +15,53 @@
  *= require_self
  */
 
-
+@mixin alert {
+  text-align: center;
+  position: absolute;
+  width: 30em;
+  top: 1%;
+  left: calc(50% - 15em);
+  padding: 1em;
+  line-height: 1.5em;
+  -webkit-animation: cssAnimation 5s forwards; 
+  animation: cssAnimation 5s forwards;
+  border-radius: 0.5em;
+}
 
 body {
   font-family: 'Raleway', sans-serif;
   position: relative;
 
-  .custom-alert {
-    text-align: center;
-    position: absolute;
-    width: 30em;
-    top: 1%;
-    left: calc(50% - 15em);
-    padding: 1em;
-    background-color: #a74953;
-    color: #fff;
-    line-height: 1.5em;
-    -webkit-animation: cssAnimation 5s forwards; 
-    animation: cssAnimation 5s forwards;
+  .alert-success {
+    @include alert;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  
+    @keyframes cssAnimation {
+      0%   {opacity: 1;}
+      90%  {opacity: 1;}
+      100% {opacity: 0;}
+    }
+
+    @-webkit-keyframes cssAnimation {
+      0%   {opacity: 1;}
+      90%  {opacity: 1;}
+      100% {opacity: 0;}
+    }
+
+    p {
+      font-size: 1.2em;
+      display: inline;
+      padding: 1em;
+    }
+  }
+
+  .alert-error {
+    @include alert;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
   
     @keyframes cssAnimation {
       0%   {opacity: 1;}

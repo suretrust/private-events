@@ -1,6 +1,6 @@
 <div class="sign-up">
   <% if @user.errors.any? %>
-  <div class="custom-alert">
+  <div class="alert alert-error">
     <%= render 'errors' %>
   </div>
   <% end %>
