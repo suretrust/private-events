@@ -8,7 +8,7 @@
       linear-gradient(rgba(0, 0, 0, 0.1),
         rgba(4, 4, 43, 0.5),
         rgba(0, 0, 0, 0.8)),
-      url(eventer);
+      url("eventer.jpg");
     background-size: cover;
     background-position: 50% 80%;
     min-height: 40em;
@@ -36,7 +36,7 @@
           font-size: 1.3rem;
           color: #fff;
           text-decoration: underline;
-          
+
           &:hover {
             color: #a74953;
           }
