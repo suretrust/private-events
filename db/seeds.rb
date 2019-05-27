@@ -63,6 +63,6 @@ Event.last.attendees << User.find_by(name: 'Bugs Bunny')
 Event.last.attendees << User.find_by(name: 'Donald Duck')
 Event.last.attendees << User.find_by(name: 'Micky Mouse')
 Event.last.attendees << User.find_by(name: 'Donald Duck')
-Event.last.attendees << User.find_by(name: 'Winnie ؛خخا')
+Event.last.attendees << User.find_by(name: 'Winnie Pooh')
 
 puts 'created attendees for the second event successfully'

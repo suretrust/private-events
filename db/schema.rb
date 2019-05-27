@@ -21,15 +21,15 @@ ActiveRecord::Schema.define(version: 2019_05_24_121032) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.text "description"
     t.index ["description"], name: "index_events_on_description"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "events_users", id: false, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "event_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
     t.index ["event_id", "user_id"], name: "index_events_users_on_event_id_and_user_id"
     t.index ["user_id", "event_id"], name: "index_events_users_on_user_id_and_event_id"
   end
@@ -42,4 +42,5 @@ ActiveRecord::Schema.define(version: 2019_05_24_121032) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "events", "users"
 end
