@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  before_action :redirect_to_home_if_already_signed_in, only: [:new]
+
   def new
     @user = User.new
   end
-
+  
   def create
     @user = User.new(user_params)
     if @user.save
@@ -15,16 +17,22 @@ class UsersController < ApplicationController
       render new_user_path
     end
   end
-
+  
   def show
     @user = User.find(params[:id])
     @enrolled_upcoming_events = @user.enrolled_events.upcoming_events
     @upcoming_events = @user.events.upcoming_events
   end
-
+  
   private
-
+  
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
+
+  def redirect_to_home_if_already_signed_in
+    redirect_to events_path if logged_in?
+  end
+  
 end
+
