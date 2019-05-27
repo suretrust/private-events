@@ -1,37 +1,51 @@
 
 <div class="show">
-  <h1 class="event-info-header">Event information</h1>
+  <h1>Event information</h1>
 
   <div class="event-information">
     
-    <h2 class="event-name">
-      <%= @event.name%>
-    </h2>
+    <div class="event-header">
+      <h2 class="event-name">
+        <%= @event.name%>
+      </h2>
+      <p class="event-description">
+        <%= @event.description%>
+      </p>
+    </div>
 
-    <p class="event-description">
-      <%= @event.description%>
-    </p>
+    <div class="event-info">
+      <p>
+        <img src="/assets/address.png" alt="address-icon">
+        <%= @event.address %>
+      </p>
+      
+      <p>
+        <img src="/assets/person.png" alt="person-icon">
+        <%= link_to @event.owner.name, @event.owner %>
+      </p>      
+    </div>
 
-    <p class="event-address">
-      <%= @event.address %>
-    </p>
-    
-    <p class="event-owner">
-      Created by <%= link_to @event.owner.name, @event.owner %>
-    </p>
-    
-    <p class="event-due-date">
+    <p class="event-date">
+      <img src="/assets/date.png" alt="date-icon">
       The event will start in <%= distance_of_time_in_words(@event.date, DateTime.now) %>
     </p>
+
   </div>
 
   <h2>List of Attendees</h2>
 
-  <ul>
-    <% @attendees.each do |attendee| %>
-      <li><%= attendee.name %></li>
-    <% end %>
-  </ul>
+  <% if @attendess.nil? %>
+    <p class="no-attendee">There are no attendees for <span><%= @event.name %></span> at this time.</p>
+  <% else %>
+    <ol class="list">
+      <% @attendees.each do |attendee| %>
+        <li><%= attendee.name %></li>
+      <% end %>
+    </ol>
+  <% end %>
 
-  <%= link_to 'Back to all events', events_path %>
+
+  <div class="back-btn">
+    <%= link_to 'Back to all events', events_path %>
+  </div>
 </div>

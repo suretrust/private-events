@@ -9,6 +9,7 @@
   font-family: 'Work Sans', sans-serif;
   width: 70%;
   margin: 0 auto;
+  padding-bottom: 3em;
 
   h1 {
     padding: 1em 0;
@@ -23,7 +24,7 @@
     padding: 1em;
 
     @media (min-width: 900px) {
-      width: 60%
+      width: 70%
     }
 
     .event-header {
@@ -131,6 +132,7 @@
       }
     }
   }
+
   .show {
     margin: 0 auto;
     width: 90%;
@@ -138,19 +140,86 @@
     @media (min-width: 800px) {
       width: 70%;
     }
-    .event-info-header {
-      font-size: 1.3em;
-      padding-bottom: 1em;
-    }
-    .event-information {
 
-      .event-name {
-        font-weight: bolder;
-        font-size: 2em;
+    h1 {
+      padding: 1em 0;
+      font-size: 2.4em;
+    }
+
+    .event-information {
+      width: 100%;
+      margin: 0 auto;
+      padding: 1em;
+
+      .event-header {
+        border-top: .3em solid #a74953;
+        background-color: #eee;
+  
+        h2 {
+          padding: .5em;
+          font-size: 2em;
+        }
+  
+        p {
+          padding: 0 .5em .5em .5em;
+          font-size: 1.2em;
+          line-height: 1.5em;
+        }
       }
-      .event-description {
-        font-size: 1.5em;
+
+      .event-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5em 0;
+        font-size: 1em;
+        background-color: #e0b2befd;
       }
+
+      .event-date {
+        padding: 0.5em 0;
+        font-size: 1em;
+        background-color: #e0b2befd;
+        text-align: center;
+        border-top: .1em solid #eee;
+      }
+    }
+
+    h2 {
+      padding: 1em 0;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 2em;
+    }
+
+    .no-attendee {
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 2em;
+      span {
+        font-weight: bold;
+      }
+    }
+
+    ol.list {
+      margin: 0 auto;
+      width: 80%;
+      list-style-type: decimal;
+      li {
+        padding: 0 .5em .5em .5em;
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+    }
+
+    .back-btn {
+      color: white;
+      text-align: center;
+      background-color: #a74953;
+      padding: 1em 2em;
+      border-radius: .5em;
+      width: 30%;
+      margin: 0 auto;
     }
   }
 }
