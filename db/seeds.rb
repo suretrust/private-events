@@ -20,28 +20,28 @@ puts 'created user successfully'
 
 # Event Creation
 User.find_by(name: 'Donald Duck').events.create!([
-  {date: Date.new(2020,2,3) , address:'Address 1 ', name: "Oh boy", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2017,2,3)  ,address:'Address 2 ', name: "Eh, what's up, Doc?", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+  {date: Date.new(2020,2,3) , address:'Address 11 ', name: "Event 11", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2017,2,3)  ,address:'Address 12 ', name: "Event 12", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
 ])
 
 puts 'created first user events'
 
 # Event Creation
 User.find_by(name: 'Bugs Bunny').events.create!([
-  {date: Date.new(2023,2,3)  ,address:'Address 5 ', name: "Hot Diggety Dog", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2005,2,3)  ,address:'Address 6 ', name: "MEESKA MOUSKA!", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+  {date: Date.new(2023,2,3)  ,address:'Address 9 ', name: "Event 9", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2005,2,3)  ,address:'Address 10 ', name: "Event 10", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
 ])
 
 # Event Creation
 User.find_by(name: 'Micky Mouse').events.create!([
-  {date: Date.new(2001,2,3)  ,address:'Address 3  ', name: "Yes, I am stubborn", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,2,3)  ,address:'Address 4  ', name: "Gee, ain't I a stinker?", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 7  ', name: "Donald Duck is not enrolled in this", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 8  ', name: "Donald Duck is not enrolled in this 2", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 9  ', name: "Donald Duck is not enrolled in this 3", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 10 ', name: "Donald Duck is not enrolled in this 4", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 11 ', name: "Donald Duck is not enrolled in this 5", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 12 ', name: "Donald Duck is not enrolled in this 6", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2001,2,3)  ,address:'Address 1  ', name: "Event 1", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,2,3)  ,address:'Address 2  ', name: "Event 2", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 3  ', name: "Event 3", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 4  ', name: "Event 4", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 5  ', name: "Event 5", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 6 ', name: "Event 6", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 7 ', name: "Event 7", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 8 ', name: "Event 8", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
 
 ])
 
