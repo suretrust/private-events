@@ -1,19 +1,18 @@
-
-
-<% if @user.errors.any? %>
+<div class="sign-up">
+  <% if @user.errors.any? %>
   <div class="custom-alert">
     <%= render 'errors' %>
   </div>
-<% end %>
+  <% end %>
 
-<div class="head">
+  <div class="head">
     <p class="logo">Event<span>IO</span></p>
     <p class="sign-up-btn"><%= link_to 'Sign In', new_session_path %></p>
-</div>
+  </div>
 
-<div class="signup-form">
+  <div class="signup-form">
     <h1 class='sign-up'>Sign Up</h1>
-  <%= form_for @user do |f| %>
+    <%= form_for @user do |f| %>
     <div>
       <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
     </div>
@@ -33,6 +32,7 @@
     <div>
       <%= f.submit 'Sign Up', class: 'submit' %>
     </div>
-  <% end %>
-  <p>Already have an account? <%= link_to 'Sign In', new_session_path %></p>
+    <% end %>
+    <p>Already have an account? <%= link_to 'Sign In', new_session_path %></p>
+  </div>
 </div>

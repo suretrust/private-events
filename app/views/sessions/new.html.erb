@@ -8,11 +8,11 @@
     <h2 class='login'>Login In</h2>
     <%= form_for :session, url: session_path, html: { autocomplete: 'off' } do |f| %>
       <div>
-        <%= f.email_field :email, placeholder: 'Email', class: 'field', autocomplete: 'none' %>
+        <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
       </div>
 
       <div>
-        <%= f.password_field :password, placeholder: 'Password', class: 'field', autocomplete: 'none' %>
+        <%= f.password_field :password, placeholder: 'Password', class: 'field' %>
       </div>
 
       <div>
