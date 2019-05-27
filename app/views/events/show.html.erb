@@ -34,18 +34,18 @@
 
   <h2>List of Attendees</h2>
 
-  <% if @attendess.nil? %>
-    <p class="no-attendee">There are no attendees for <span><%= @event.name %></span> at this time.</p>
-  <% else %>
+  <% unless @attendees.size.zero? %>
     <ol class="list">
       <% @attendees.each do |attendee| %>
         <li><%= attendee.name %></li>
       <% end %>
     </ol>
+  <% else %>
+    <p class="no-attendee">There are no attendees for <span><%= @event.name %></span> at this time.</p>
   <% end %>
 
 
   <div class="back-btn">
-    <%= link_to 'Back to all events', events_path %>
+    <%= button_to 'Back to all events', events_path, method: :get %>
   </div>
 </div>

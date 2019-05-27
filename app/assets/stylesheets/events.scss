@@ -176,6 +176,10 @@
         background-color: #e0b2befd;
       }
 
+      .event-info a {
+        text-decoration: underline;
+      }
+
       .event-date {
         padding: 0.5em 0;
         font-size: 1em;
@@ -213,13 +217,22 @@
     }
 
     .back-btn {
-      color: white;
-      text-align: center;
-      background-color: #a74953;
-      padding: 1em 2em;
-      border-radius: .5em;
+
       width: 30%;
       margin: 0 auto;
+
+      input[type="submit"] {
+        color: #fff;
+        margin-top: 1.5em;
+        width: 100%;
+        background-color: #a74953;
+        padding: .8em .2em;
+        border: none;
+        border-radius: .3em;
+        font-size: 1em;
+        cursor: pointer;  
+      }
     }
+
   }
 }
