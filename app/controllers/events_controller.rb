@@ -20,7 +20,12 @@ class EventsController < ApplicationController
   
   def create
     @event = current_user.events.create event_params
-    redirect_to @event
+    if @event.save
+      flash[:success] = 'Event Created!'
+      redirect_to @event
+    else
+      render :new
+    end
   end
 
   def update

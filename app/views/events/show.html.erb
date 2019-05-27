@@ -1,29 +1,37 @@
-<h1>Event information</h1>
 
-<div class="event-information">
-  <p class="event-owner">
-    <%= @event.owner.name %> owns this event
-  </p>
-  
-  <p class="event-name">
-    <%= @event.name%>
-  </p>
+<div class="show">
+  <h1 class="event-info-header">Event information</h1>
 
-  <p class="event-address">
-    <%= @event.address %>
-  </p>
-  
-  <p class="event-due-date">
-    The event will start in <%= distance_of_time_in_words(@event.date, DateTime.now) %>
-  </p>
+  <div class="event-information">
+    
+    <h2 class="event-name">
+      <%= @event.name%>
+    </h2>
+
+    <p class="event-description">
+      <%= @event.description%>
+    </p>
+
+    <p class="event-address">
+      <%= @event.address %>
+    </p>
+    
+    <p class="event-owner">
+      Created by <%= link_to @event.owner.name, @event.owner %>
+    </p>
+    
+    <p class="event-due-date">
+      The event will start in <%= distance_of_time_in_words(@event.date, DateTime.now) %>
+    </p>
+  </div>
+
+  <h2>List of Attendees</h2>
+
+  <ul>
+    <% @attendees.each do |attendee| %>
+      <li><%= attendee.name %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Back to all events', events_path %>
 </div>
-
-<h2>List of Attendees</h2>
-
-<ul>
-  <% @attendees.each do |attendee| %>
-    <li><%= attendee.name %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'Back to all events', events_path %>

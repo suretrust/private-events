@@ -11,4 +11,7 @@ class Event < ApplicationRecord
 
   # default scope
   default_scope { order(:date) }
+
+  # validations
+  validates :name, :address, :date, presence: true
 end

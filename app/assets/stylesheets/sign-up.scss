@@ -1,4 +1,4 @@
-.users {
+
   .sign-up {
     background-image:
       linear-gradient(to right top,
@@ -29,6 +29,7 @@
         padding: .7em 0;
 
         a {
+          font-weight: bold;
           text-decoration: underline;
           font-size: 1.3rem;
           color: #fff;
@@ -45,7 +46,8 @@
       text-align: center;
       height: calc(100vh - 9em);
 
-      .sign-up {
+      .sign-up-header {
+        color: white;
         font-size: 2em;
         padding-bottom: .4em;
       }
@@ -61,8 +63,9 @@
       }
 
       .submit {
+        font-size: 1.2em;
         width: 60%;
-        background-color: rgb(190, 124, 0);
+        background-color: #a74953;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -71,9 +74,8 @@
         cursor: pointer;
 
         &:hover {
-          background-color: rgb(214, 139, 0);
+          background-color: #a74953;
         }
       }
     }
   }
-}

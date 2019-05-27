@@ -5,11 +5,11 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 
 
-.events {  
+.events {
   font-family: 'Work Sans', sans-serif;
   width: 70%;
   margin: 0 auto;
-  
+
   h1 {
     padding: 1em 0;
     text-align: center;
@@ -18,18 +18,23 @@
   }
 
   .event-box {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     padding: 1em;
 
+    @media (min-width: 900px) {
+      width: 60%
+    }
+
     .event-header {
-      border-top: .3em solid orange;
+      border-top: .3em solid #a74953;
       background-color: #eee;
 
       .event-name a {
         text-decoration: underline;
         color: inherit;
       }
+
       .event-name a:hover {
         color: #1e453e;
       }
@@ -38,6 +43,7 @@
         padding: .5em;
         font-size: 2em;
       }
+
       p {
         padding: 0 .5em .5em .5em;
         font-size: 1.2em;
@@ -51,35 +57,99 @@
       justify-content: space-around;
       padding: 0.5em 0;
       font-size: 1em;
-      background-color: rgba(265, 165, 0, .5);
+      background-color: #e0b2befd;
 
       a {
         text-decoration: underline;
         color: black;
-        
+
         &:hover {
           color: #1e453e;
         }
       }
     }
-    
+
     .enroll-btn {
+
       width: 30%;
       margin: 0 auto;
-    
+
       input[type="submit"] {
-        
+        color: #fff;
         margin-top: 1.5em;
         width: 100%;
-        background-color: orange;
+        background-color: #a74953;
         padding: .4em .2em;
         border: none;
         border-radius: .3em;
         font-size: 1em;
         cursor: pointer;
       }
+
       input[type="submit"]:disabled {
         background: #dddddd;
+        color: #999;
+        cursor: not-allowed
+      }
+    }
+  }
+
+  .new-event-form {
+    margin: 5em auto;
+    text-align: center;
+    height: calc(100vh - 9em);
+
+    .new-event-header {
+      font-size: 2em;
+      padding-bottom: .4em;
+    }
+
+    .field {
+      width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    .submit {
+      font-size: 1.2em;
+      width: 60%;
+      background-color: #a74953;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #a74953;
+      }
+    }
+  }
+  .show {
+    margin: 0 auto;
+    width: 90%;
+
+    @media (min-width: 800px) {
+      width: 70%;
+    }
+    .event-info-header {
+      font-size: 1.3em;
+      padding-bottom: 1em;
+    }
+    .event-information {
+
+      .event-name {
+        font-weight: bolder;
+        font-size: 2em;
+      }
+      .event-description {
+        font-size: 1.5em;
       }
     }
   }

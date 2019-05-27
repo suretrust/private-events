@@ -11,28 +11,27 @@
   </div>
 
   <div class="signup-form">
-    <h1 class='sign-up'>Sign Up</h1>
+    <h1 class='sign-up-header'>Sign Up</h1>
     <%= form_for @user do |f| %>
-    <div>
-      <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
-    </div>
+      <div>
+        <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
+      </div>
 
-    <div>
-      <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
-    </div>
+      <div>
+        <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
+      </div>
 
-    <div>
-      <%= f.password_field :password, placeholder: 'Password', class: 'field' %>
-    </div>
+      <div>
+        <%= f.password_field :password, placeholder: 'Password', class: 'field' %>
+      </div>
 
-    <div>
-      <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'field' %>
-    </div>
+      <div>
+        <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'field' %>
+      </div>
 
-    <div>
-      <%= f.submit 'Sign Up', class: 'submit' %>
-    </div>
+      <div>
+        <%= f.submit 'Sign Up', class: 'submit' %>
+      </div>
     <% end %>
-    <p>Already have an account? <%= link_to 'Sign In', new_session_path %></p>
   </div>
 </div>

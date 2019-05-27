@@ -1,22 +1,33 @@
-<h1>Create new event</h1>
-
-<%= form_for @event  do |f| %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+<div class="events">
+  <% if @event.errors.any? %>
+  <div class="alert alert-error">
+    <ul>
+    <% @event.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>  
   </div>
+  <% end %>
+  <div class="new-event-form">
 
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
+    <h1 class="new-event-header">Create new event</h1>
 
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.date_field :date %>
-  </div>
+    <%= form_for @event  do |f| %>
+      <div>
+        <%= f.text_field :name, placeholder: 'Enter event name', class: 'field' %>
+      </div>
 
-  <div class="submit">
-    <%= f.submit 'Add Event' %>
+      <div>
+        <%= f.text_field :address, placeholder: 'Enter event address', class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.date_field :date, class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.submit 'Add Event', class: 'submit' %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
