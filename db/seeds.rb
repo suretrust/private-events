@@ -14,36 +14,40 @@ User.create!([
   {email: "donald@duck.com", password: "123456", name: "Donald Duck"},
   {email: "bugs@bunny.com", password: "123456", name: "Bugs Bunny"},
   {email: "micky@mouse.com", password: "123456", name: "Micky Mouse"},
+  {email: "winnie@pooh.com", password: "123456", name: "Winnie Pooh"}
 ])
 
-puts 'created user successfully'
-
-# Event Creation
-User.find_by(name: 'Donald Duck').events.create!([
-  {date: Date.new(2020,2,3) , address:'Address 11 ', name: "Event 11", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2017,2,3)  ,address:'Address 12 ', name: "Event 12", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
-])
-
-puts 'created first user events'
-
-# Event Creation
-User.find_by(name: 'Bugs Bunny').events.create!([
-  {date: Date.new(2023,2,3)  ,address:'Address 9 ', name: "Event 9", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2005,2,3)  ,address:'Address 10 ', name: "Event 10", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
-])
+puts 'created users successfully'
 
 # Event Creation
 User.find_by(name: 'Micky Mouse').events.create!([
-  {date: Date.new(2001,2,3)  ,address:'Address 1  ', name: "Event 1", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,2,3)  ,address:'Address 2  ', name: "Event 2", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 3  ', name: "Event 3", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 4  ', name: "Event 4", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 5  ', name: "Event 5", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 6 ', name: "Event 6", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 7 ', name: "Event 7", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-  {date: Date.new(2022,7,3)  ,address:'Address 8 ', name: "Event 8", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
-
+  {date: Date.new(2001,2,3)  ,address:'Address 01', name: "Event 01", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,2,3)  ,address:'Address 02', name: "Event 02", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 03', name: "Event 03", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 04', name: "Event 04", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
 ])
+
+User.find_by(name: 'Micky Mouse').events.create!([
+  {date: Date.new(2022,7,3)  ,address:'Address 05', name: "Event 05", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 06', name: "Event 06", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 07', name: "Event 07", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2022,7,3)  ,address:'Address 08', name: "Event 08", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+])
+
+User.find_by(name: 'Bugs Bunny').events.create!([
+  {date: Date.new(2023,2,3)  ,address:'Address 09', name: "Event 09", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2005,2,3)  ,address:'Address 10', name: "Event 10", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2023,2,3)  ,address:'Address 11', name: "Event 11", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2005,2,3)  ,address:'Address 12', name: "Event 12", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+])
+
+User.find_by(name: 'Donald Duck').events.create!([
+  {date: Date.new(2020,2,3) , address:'Address 13 ', name: "Event 13", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2017,2,3)  ,address:'Address 14 ', name: "Event 14", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2023,2,3)  ,address:'Address 15 ', name: "Event 15", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."},
+  {date: Date.new(2005,2,3)  ,address:'Address 16 ', name: "Event 16", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+])
+
 
 puts 'created events successfully'
 
@@ -51,11 +55,14 @@ puts 'created events successfully'
 Event.first.attendees << User.find_by(name: 'Bugs Bunny')
 Event.first.attendees << User.find_by(name: 'Donald Duck')
 Event.first.attendees << User.find_by(name: 'Micky Mouse')
+Event.first.attendees << User.find_by(name: 'Winnie Pooh')
 
-puts 'created attendees'
+puts 'created attendees for the first event successfully'
 
 Event.last.attendees << User.find_by(name: 'Bugs Bunny')
 Event.last.attendees << User.find_by(name: 'Donald Duck')
 Event.last.attendees << User.find_by(name: 'Micky Mouse')
+Event.last.attendees << User.find_by(name: 'Donald Duck')
+Event.last.attendees << User.find_by(name: 'Winnie ؛خخا')
 
-puts 'created attendees successfully'
+puts 'created attendees for the second event successfully'
