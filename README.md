@@ -13,6 +13,6 @@ The live version of this project is [here](https://eventsio.herokuapp.com).
 4. Start the server 👉 `rails s`.
 5. Go to localhost.
 
-## Contributers
+## Contributors
 - [Saheed](https://github.com/suretrust)
 - [Muhammad](https://github.com/mosaaleb)
