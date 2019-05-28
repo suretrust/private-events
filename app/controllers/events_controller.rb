@@ -13,11 +13,11 @@ class EventsController < ApplicationController
     @event = Event.find params[:id]
     @attendees = @event.attendees
   end
-  
+
   def new
     @event = current_user.events.new
   end
-  
+
   def create
     @event = current_user.events.create event_params
     if @event.save
@@ -43,5 +43,6 @@ class EventsController < ApplicationController
 
   def require_login
     redirect_to sign_in_path unless logged_in?
+    flash[:error] = 'You must be logged in to view events!' unless logged_in?
   end
 end
