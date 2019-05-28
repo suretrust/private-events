@@ -15,18 +15,18 @@
 
     <div class="event-info">
       <p>
-        <img src="/assets/address.png" alt="address-icon">
+        <%= image_tag 'address.png' %>
         <%= @event.address %>
       </p>
       
       <p>
-        <img src="/assets/person.png" alt="person-icon">
+        <%= image_tag 'person.png' %>
         <%= link_to @event.owner.name, @event.owner %>
       </p>      
     </div>
 
     <p class="event-date">
-      <img src="/assets/date.png" alt="date-icon">
+      <%= image_tag 'date.png' %>
       The event will start in <%= distance_of_time_in_words(@event.date, DateTime.now) %>
     </p>
 
