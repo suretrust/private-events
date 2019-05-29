@@ -37,7 +37,7 @@
   <% unless @attendees.size.zero? %>
     <ol class="list">
       <% @attendees.each do |attendee| %>
-        <li><%= attendee.name %></li>
+        <li><%= capitalize(attendee.name) %></li>
       <% end %>
     </ol>
   <% else %>
