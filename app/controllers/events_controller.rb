@@ -43,6 +43,6 @@ class EventsController < ApplicationController
 
   def require_login
     redirect_to sign_in_path unless logged_in?
-    flash[:error] = 'You must be logged in to create or view events!' unless logged_in?
+    flash[:error] = 'Please, log in to create or view events!' unless logged_in?
   end
 end
