@@ -36,7 +36,7 @@ html {
 
 body {
   /* .75 footer height to make it fixed */
-  margin-bottom: 3em;
+  margin-bottom: 50px;
   font-family: 'Raleway', sans-serif;
 
   .alert-success {
@@ -118,11 +118,10 @@ body {
   footer {
     background-color: black;
     text-align: center;
-    position: fixed;
     color: white;
-    line-height: 4em;
+    line-height: 60px;
     position: fixed;
-    height: 4em;
+    height: 60px;
     bottom: 0;
     width: 100%;
   }
