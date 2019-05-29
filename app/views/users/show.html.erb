@@ -1,11 +1,12 @@
 
 <div class="show-users">
-
   <div class="enrolled-upcoming-events">
+    
     <h2>Enrolled  Upcoming Events</h2>
 
     <div class="event-box">
       <% @enrolled_upcoming_events.each do |event| %>
+        
         <div class="event-name">
           <%= link_to event.name, event %>
         </div>
@@ -16,6 +17,7 @@
             <%= event.date.strftime("%B %d, %Y") %>
           </p>
         </div>
+
       <% end %>
     </div>
 
@@ -32,15 +34,28 @@
     </div>
 
     <div class="event-box">
-      <% @upcoming_events.each do |event| %>
+      <div class="upcoming-events">
+        <h3>Upcoming events</h3>
+        <% @upcoming_events.each do |event| %>
 
-        <div class='event-name'>
-          <%= link_to event.name, event %>
-        </div>
-        
-      <% end %>
+          <div class='event-name'>
+            <%= link_to event.name, event %>
+          </div>
+          
+        <% end %>
+      </div>
+
+      <div class="previous-events">
+        <h3>Upcoming events</h3>
+        <% @previous_events.each do |event| %>
+
+          <div class='event-name'>
+            <%= link_to event.name, event %>
+          </div>
+          
+        <% end %>
+      </div>
     </div>
 
   </div>
-
 </div>
