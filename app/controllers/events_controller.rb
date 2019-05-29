@@ -2,7 +2,7 @@
 
 class EventsController < ApplicationController
   include EventsHelper
-  before_action :require_login, only: [:index, :new, :show]
+  before_action :require_login, only: %i[index new show]
 
   def index
     @previous_events = Event.previous_events
@@ -43,6 +43,6 @@ class EventsController < ApplicationController
 
   def require_login
     redirect_to sign_in_path unless logged_in?
-    flash[:error] = 'You must be logged in to view events!' unless logged_in?
+    flash[:error] = 'Please, log in to create or view events!' unless logged_in?
   end
 end

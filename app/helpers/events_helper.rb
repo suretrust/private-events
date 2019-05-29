@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module EventsHelper
   def enrolled?(event)
     current_user.enrolled_events.exists?(event.id)
@@ -11,8 +13,7 @@ module EventsHelper
     if @event.date.today? || @event.date.future?
       render html: "The Event Will Start in #{verbose_time}"
     else
-      render html: "This Event has been archieved"
+      render html: 'This Event has been archived'
     end
   end
-
 end
