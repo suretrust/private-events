@@ -2,7 +2,7 @@
 
 class EventsController < ApplicationController
   include EventsHelper
-  before_action :require_login, only: :index
+  before_action :require_login, only: [:index, :new, :show]
 
   def index
     @previous_events = Event.previous_events
