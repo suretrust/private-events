@@ -1,9 +1,6 @@
 <div class="sign-up">
-  <% if @user.errors.any? %>
-  <div class="alert alert-error">
-    <%= render 'errors' %>
-  </div>
-  <% end %>
+
+  <%= print_errors_if_any(@user) %>
 
   <div class="head">
     <p class="logo">Events<span>IO</span></p>

@@ -6,4 +6,5 @@ module EventsHelper
   def verbose_time
     distance_of_time_in_words(@event.date, DateTime.now)
   end
+
 end
