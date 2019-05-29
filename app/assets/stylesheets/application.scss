@@ -28,9 +28,16 @@
   border-radius: 0.5em;
 }
 
-body {
-  font-family: 'Raleway', sans-serif;
+html {
   position: relative;
+  height: 100%;
+}
+
+
+body {
+  /* .75 footer height to make it fixed */
+  margin-bottom: 3em;
+  font-family: 'Raleway', sans-serif;
 
   .alert-success {
     @include alert;
@@ -111,12 +118,11 @@ body {
   footer {
     background-color: black;
     text-align: center;
+    position: fixed;
     color: white;
     line-height: 4em;
     height: 4em;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    bottom: 0;
+    width: 100%;
   }
 }
