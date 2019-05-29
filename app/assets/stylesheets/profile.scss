@@ -62,6 +62,15 @@
         margin: 0 auto;
         margin: .5em;
 
+        .upcoming-events {
+          margin-bottom: 1.2em;
+        }
+
+        .upcoming-events h3, .previous-events h3 {
+          font-size: 2em;
+          padding: .3em 0.1em;
+          border: .05em solid #e0b2befd;
+        }
 
         .event-name {
           border-top: .3em solid #a74953;
