@@ -21,19 +21,7 @@
       </div>
     <% end %>
 
-    <% if logged_in? %>
-      <header>
-        <div class='left'>
-          <%= link_to 'Events', events_path %>
-          <%= link_to 'Create Event', new_event_path %> 
-        </div>
-        
-        <div class='right'>
-          <%= link_to current_user.name, current_user %>
-          <%= link_to 'Sign Out', session_path, method: :delete  %>
-        </div>
-      </header>
-    <% end %>
+    <%= show_header_if_user_logged_in %>
 
     <main class="<%= controller.controller_name %>">
       <%= yield %>
