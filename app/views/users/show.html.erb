@@ -7,7 +7,7 @@
     <div class="event-box">
       <% @enrolled_upcoming_events.each do |event| %>
         <div class="event-name">
-          <%= link_to capitalize(event.name), event %>
+          <%= link_to event.name, event %>
         </div>
 
         <div class="event-info">
@@ -35,7 +35,7 @@
       <% @upcoming_events.each do |event| %>
 
         <div class='event-name'>
-          <%= link_to capitalize(event.name), event %>
+          <%= link_to event.name, event %>
         </div>
         
       <% end %>
