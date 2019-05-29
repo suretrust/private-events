@@ -21,8 +21,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @enrolled_upcoming_events = @user.enrolled_events.upcoming_events
-    @upcoming_events = @user.events.upcoming_events
-    @previous_events = @user.events.previous_events
+    
+    get_user_previous_events
+    get_user_upcoming_events
   end
   
   private
@@ -33,6 +34,14 @@ class UsersController < ApplicationController
 
   def redirect_to_home_if_already_signed_in
     redirect_to events_path if logged_in?
+  end
+
+  def get_user_previous_events
+    @previous_events = @user.events.previous_events
+  end
+
+  def get_user_upcoming_events
+    @upcoming_events = @user.events.upcoming_events
   end
   
 end
