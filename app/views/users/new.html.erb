@@ -1,0 +1,34 @@
+<div class="sign-up">
+
+  <%= print_errors_if_any(@user) %>
+
+  <div class="head">
+    <p class="logo">Events<span>IO</span></p>
+    <p class="sign-up-btn"><%= link_to 'Sign In', new_session_path %></p>
+  </div>
+
+  <div class="signup-form">
+    <h1 class='sign-up-header'>Sign Up</h1>
+    <%= form_for @user do |f| %>
+      <div>
+        <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.password_field :password, placeholder: 'Password', class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.submit 'Sign Up', class: 'submit' %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PrivateEvents</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>EventsIO</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +14,22 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <% flash.each do |key, value| %>
+      <div class="alert-<%= key %>" >
+        <p><%= value %></p>
+      </div>
+    <% end %>
+
+    <%= show_header_if_user_logged_in %>
+
+    <main class="<%= controller.controller_name %>">
+      <%= yield %>
+    </main>
+
+    <footer>
+      &copy; Copyright 2019 EventsIO.com
+    </footer>
+  
   </body>
 </html>

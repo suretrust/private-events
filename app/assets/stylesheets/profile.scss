@@ -1,0 +1,94 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.users {
+  .show-users {
+    font-family: 'Work Sans', sans-serif;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+    .enrolled-upcoming-events {
+      width: 50%;
+
+      h2 {
+        padding: 1em 0;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 2.5vw;
+      }
+
+      .event-box {
+        margin: .5em 1em;
+
+        .event-name {
+
+          border-top: .3em solid #a74953;
+          background-color: #eee;
+          font-size: 2em;
+          padding: .3em 0.3em;
+
+          a {
+            text-decoration: underline;
+            color: inherit;
+          }
+
+          a:hover {
+            color: #1e453e;
+          }
+        }
+
+        .event-info {
+          background-color: #e0b2befd;
+          padding: .8em .3em;
+          margin-bottom: 1em;
+        }
+      }
+    }
+
+    .events-details {
+      width: 50%;
+
+      .event-header h2 {
+        padding: 1em 0;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 2.5vw;
+      }
+
+      .event-box {
+        margin: 0 auto;
+        margin: .5em;
+
+        .upcoming-events {
+          margin-bottom: 1.2em;
+        }
+
+        .upcoming-events h3, .previous-events h3 {
+          font-size: 2em;
+          padding: .3em 0.1em;
+          border: .05em solid #e0b2befd;
+        }
+
+        .event-name {
+          border-top: .3em solid #a74953;
+          background-color: #eee;
+          font-size: 2em;
+          padding: .3em 0.3em;
+
+          a {
+            text-decoration: underline;
+            color: inherit;
+          }
+
+          a:hover {
+            color: #1e453e;
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<div class="events">
+
+  <%= print_errors_if_any(@event) %>
+
+  <div class="new-event-form">
+
+    <h1 class="new-event-header">Create new event</h1>
+
+    <%= form_for @event  do |f| %>
+      <div>
+        <%= f.text_field :name, placeholder: 'Enter event name', class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.text_field :address, placeholder: 'Enter event address', class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.date_field :date, class: 'field' %>
+      </div>
+
+      <div>
+        <%= f.submit 'Add Event', class: 'submit' %>
+      </div>
+    <% end %>
+  </div>
+</div>

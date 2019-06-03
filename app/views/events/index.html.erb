@@ -1,0 +1,35 @@
+
+<h1>Amazing events you can attend</h1>
+<% @upcoming_events.each do |event| %>
+  <div class='event-box'>
+    
+    <div class="event-header">
+      <h2 class="event-name"><%= link_to event.name, event %></h2>
+      <p class="event-description">
+        <%= event.description %>
+      </p>
+    </div>
+    
+    <div class="event-info">
+      <p>
+        <%= image_tag 'address.png' %>
+        <%= event.address %>
+      </p>
+      
+      <p>
+        <%= image_tag 'date.png' %>
+        <%= event.date.strftime("%B %d, %Y") %>
+      </p>
+      
+      <p>
+        <%= image_tag 'person.png' %>
+        <%= link_to event.owner.name, event.owner %>
+      </p>
+    </div>
+
+    <div class="enroll-btn">
+      <%= button_to 'Enroll', event, method: :patch, disabled: enrolled?(event) %>
+    </div>
+
+  </div>
+<% end %>

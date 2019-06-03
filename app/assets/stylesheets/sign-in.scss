@@ -1,0 +1,107 @@
+.sessions {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: #fff;
+
+  .background {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.1),
+        rgba(4, 4, 43, 0.5),
+        rgba(0, 0, 0, 0.8)),
+        image-url(eventer);
+    background-size: cover;
+    background-position: 50% 80%;
+    height: 93vh;
+
+    .head {
+      padding: 1.5em 3em;
+      display: flex;
+      justify-content: space-between;
+
+      .logo {
+        font-size: 2.8rem;
+        font-weight: 300;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+
+      .sign-up-btn {
+        padding: .7em 0;
+
+        a {
+          font-weight: bold;
+          font-size: 1.3rem;
+          color: #fff;
+          text-decoration: underline;
+
+          &:hover {
+            color: #a74953;
+          }
+        }
+      }
+    }
+  }
+
+  .login-form {
+    font-family: 'Raleway', sans-serif;
+    width: 70%;
+    margin: 0 auto;
+
+    @media (min-width: 700px) {
+      width: 40%
+    }
+
+
+    .login {
+      font-size: 2.3rem;
+      padding: 1.5rem 0;
+      font-weight: 500;
+      margin: .8em;
+    }
+
+    .field,
+    .submit {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2em;
+      padding: 1em 1.5em;
+      margin: 1em;
+      color: #fff;
+      border: none;
+
+    }
+
+    .field {
+      width: 80%;
+      background-color: rgba(1, 1, 1, .8);
+      border-bottom: .1em solid #a74953;
+
+      &::placeholder {
+        color: #666;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    /* Change Autocomplete styles in Chrome*/
+    .field:-webkit-autofill,
+    .field:-webkit-autofill:hover,
+    .field:-webkit-autofill:focus {
+      border-bottom: .15em solid #a74953;
+      -webkit-text-fill-color: #a74953;
+      box-shadow: 0 0 0px 1000px #000 inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .submit {
+      background-color: #a74953;
+      opacity: .8;
+      width: 90%;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,237 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+
+.events {
+  font-family: 'Work Sans', sans-serif;
+  width: 70%;
+  margin: 0 auto 5em auto;
+
+  h1 {
+    padding: 1em 0;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2.4em;
+  }
+
+  .event-box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+
+    @media (min-width: 900px) {
+      width: 70%
+    }
+
+    .event-header {
+      border-top: .3em solid #a74953;
+      background-color: #eee;
+
+      .event-name a {
+        text-decoration: underline;
+        color: inherit;
+      }
+
+      .event-name a:hover {
+        color: #1e453e;
+      }
+
+      h2 {
+        padding: .5em;
+        font-size: 2em;
+      }
+
+      p {
+        padding: 0 .5em .5em .5em;
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+    }
+
+    .event-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0.5em 0;
+      font-size: 1em;
+      background-color: #e0b2befd;
+
+      a {
+        text-decoration: underline;
+        color: black;
+
+        &:hover {
+          color: #1e453e;
+        }
+      }
+    }
+
+    .enroll-btn {
+
+      width: 30%;
+      margin: 0 auto;
+
+      input[type="submit"] {
+        color: #fff;
+        margin-top: 1.5em;
+        width: 100%;
+        background-color: #a74953;
+        padding: .4em .2em;
+        border: none;
+        border-radius: .3em;
+        font-size: 1em;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:disabled {
+        background: #dddddd;
+        color: #999;
+        cursor: not-allowed
+      }
+    }
+  }
+
+  .new-event-form {
+    margin: 5em auto;
+    text-align: center;
+    height: calc(100vh - 9em);
+
+    .new-event-header {
+      font-size: 2em;
+      padding-bottom: .4em;
+    }
+
+    .field {
+      width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    .submit {
+      font-size: 1.2em;
+      width: 60%;
+      background-color: #a74953;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #a74953;
+      }
+    }
+  }
+
+  .show {
+    margin: 0 auto;
+    width: 90%;
+
+    @media (min-width: 800px) {
+      width: 70%;
+    }
+
+    h1 {
+      padding: 1em 0;
+      font-size: 2.4em;
+    }
+
+    .event-information {
+      width: 100%;
+      margin: 0 auto;
+      padding: 1em;
+
+      .event-header {
+        border-top: .3em solid #a74953;
+        background-color: #eee;
+  
+        h2 {
+          padding: .5em;
+          font-size: 2em;
+        }
+  
+        p {
+          padding: 0 .5em .5em .5em;
+          font-size: 1.2em;
+          line-height: 1.5em;
+        }
+      }
+
+      .event-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5em 0;
+        font-size: 1em;
+        background-color: #e0b2befd;
+      }
+
+      .event-info a {
+        text-decoration: underline;
+      }
+
+      .event-date {
+        padding: 0.5em 0;
+        font-size: 1em;
+        background-color: #e0b2befd;
+        text-align: center;
+        border-top: .1em solid #eee;
+      }
+    }
+
+    h2 {
+      padding: 1em 0;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 2em;
+    }
+
+    .no-attendee {
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 2em;
+      span {
+        font-weight: bold;
+      }
+    }
+
+    ol.list {
+      margin: 0 auto;
+      width: 80%;
+      list-style-type: decimal;
+      li {
+        padding: 0 .5em .5em .5em;
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+    }
+
+    .back-btn {
+
+      width: 30%;
+      margin: 0 auto;
+
+      input[type="submit"] {
+        color: #fff;
+        margin-top: 1.5em;
+        width: 100%;
+        background-color: #a74953;
+        padding: .8em .2em;
+        border: none;
+        border-radius: .3em;
+        font-size: 1em;
+        cursor: pointer;  
+      }
+    }
+
+  }
+}
