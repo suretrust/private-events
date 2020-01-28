@@ -16,5 +16,5 @@ The live version of this project is [here](https://eventsio.herokuapp.com).
 5. Go to localhost.
 
 ## Contributors
-- [Saheed](https://github.com/suretrust)
+- [Saheed](https://github.com/suretrust) [(Email)](mailto:saholadele@gmail.com)
 - [Muhammad](https://github.com/mosaaleb)
